@@ -1,0 +1,83 @@
+<div class="resorces_model_wrap">
+	<div class="r_model_container">
+		<div class="model_head">
+			<div class="model_head_icon">
+				<img src="images/icons/add_document.png" alt="add document" />
+			</div>
+			<div class="model_head_text">
+				Add FAQ
+			</div>
+		</div>
+		<form method="post" id="faq_add_form" enctype="multipart/form-data">
+			<div class="r_m_form">
+				<div class="row">
+					<div class="col_2">
+						<div class="ff_container">
+							<label>Question:</label>
+							<input type="text" name="faq_name" placeholder="Type Here" class="form-control" />
+						</div>
+					</div>
+					<div class="col_2">
+						<div class="hf_container">
+							<label>Date:</label>
+							<input type="text" name="faq_date" readonly="readonly" placeholder="" class="form-control calender_textbox datepicker" />
+						</div>
+						<div class="hf_container">
+							<label>Access Level:</label>
+							<select class="faq_access_level" name="faq_access_level[]" multiple="multiple"><option>loading...</option></select>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col_2">
+						<div class="hf_container">
+							<label>Country:</label>
+							<select class="faq_country" name="faq_country[]" multiple="multiple"><option>loading...</option></select>
+						</div>
+						<div class="hf_container">
+							<label>Region:</label>
+							<select class="faq_region" name="faq_region[]" multiple="multiple"><option>loading...</option></select>
+						</div>
+					</div>
+					<div class="col_2">
+						<div class="hf_container">
+							<label>Zone:</label>
+							<select class="faq_zone" name="faq_zone[]" multiple="multiple"><option>loading...</option></select>
+						</div>
+						<div class="hf_container">
+							<label>Venue:</label>
+							<select class="faq_venue" name="faq_venue[]" multiple="multiple"><option>loading...</option></select>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col_8">
+						<label>Answer:</label>
+						<textarea class="form-control" name="faq_answer" placeholder="Type Here" ></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="model_button">
+				<div class="model_button_right">
+					<div class="btn-group action-button action-nxt icon-btn">
+						<div class="wrap-btn">
+							<button type="button" class="button btn-green btn-block radius" id="faq_submit_button">
+								<span class="v-flex"> <span class="btn-txt">Add New</span> <span class="circle-flex"> <span class="s-btn-icon radius"><i class="fa fa-chevron-right"></i></span> </span> </span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="model_button_left">
+					<div class="btn-group action-button icon-btn list list_button" data-tab="faq" data-tabTitle="faqs">
+						<div class="wrap-btn">
+							<button type="button" class="button btn-action btn-block radius">
+								<span class="v-flex"> <span class="circle-flex"> <span class="s-btn-icon radius"><i class="fa fa-chevron-left"></i></span> </span> <span class="btn-txt">Back</span> </span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

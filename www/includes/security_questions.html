@@ -1,0 +1,96 @@
+<div class="login_wrapper security_questions_holder">
+	<div class="login_container">
+		<div class="login_inner">
+			<div class="login_logo">
+				<a href="javascript:void(0);"><img src="images/vsg-jll.png" alt="App Logo" /></a>
+			</div>
+			<div class="login_logo">
+				<a href="javascript:void(0);"><img src="images/client_logo.png" alt="App Logo" /></a>
+			</div>
+			<div class="clr"></div>
+			<div class="login_profile_icon"><img src="images/forgot.png" alt="profile image" />
+			</div>
+			<div class="login_profile_heading">
+				<h1>Security Questions:</h1>
+			</div>
+			<div class="login_form-wrap">				
+				<div class="input-style security_questions1_holder">
+					<label class="form_label" for="security_questions1">Question 1 :</label>
+					<select name="security_questions1" id="security_questions1" class="form-control">
+			    		<option value="">Please select question 1</option>
+			    		<option value="1">What was your childhood nickname?</option>
+			    		<option value="2">In what city or town did your mother and father meet?</option>
+			    		<option value="3">What is your favourite sports team?</option>
+			    		<option value="4">What was the make of your first car?</option>
+			    		<option value="5">In what town was your first job?</option>
+			    		<option value="6">What was the name of your second pet?</option>
+			    		<option value="7">Who was your childhood hero? </option>
+			    	</select>
+				</div>
+				
+				<div class="input-style security_questions1_answer_holder" style="display: none;">
+					<label class="form_label" for="security_questions1_answer">Answer :</label>
+					<input type="text" name="security_questions1_answer" id="security_questions1_answer" class="form-control" />
+				</div>
+				
+				<div class="input-style security_questions2_holder">
+					<label class="form_label" for="security_questions2">Question 2 :</label>
+					<select name="security_questions2" id="security_questions2" class="form-control">
+			    		<option value="">Please select question 2</option>
+			    		<option value="1">What was your childhood nickname?</option>
+			    		<option value="2">In what city or town did your mother and father meet?</option>
+			    		<option value="3">What is your favourite sports team?</option>
+			    		<option value="4">What was the make of your first car?</option>
+			    		<option value="5">In what town was your first job?</option>
+			    		<option value="6">What was the name of your second pet?</option>
+			    		<option value="7">Who was your childhood hero? </option>
+			    	</select>
+				</div>
+				
+				<div class="input-style security_questions2_answer_holder" style="display: none;">
+					<label class="form_label" for="security_questions2_answer">Answer :</label>
+					<input type="text" name="security_questions2_answer" id="security_questions2_answer" class="form-control" />
+				</div>
+				
+				<div class="chpwd_ins sq_new_password_guidline" style="display: none;">
+					<h4>Password Guidelines:</h4>
+					<ol>
+					    <li id="sq_valicond1" class="red">Minimum Characters: 8</li>
+					    <li id="sq_valicond2" class="red">Maximum Characters: 15</li>
+					    <li id="sq_valicond3" class="red">Minimum Alphabetic Characters: 5</li>
+					    <li id="sq_valicond4" class="red">Minimum Numeric Characters 1</li>
+					    <li id="sq_valicond5" class="green">Maximum Repeated Characters: 2</li>
+					    <li id="sq_valicond6" class="green">Characters Not Permitted: "Â£%*()_¬{}:~&gt;&lt;?/|[\]</li>
+					    <li id="sq_match_password" style="display: none;" class="red">Passwords do not match</li>
+					</ol>
+				</div>
+				
+				<div class="input-style sq_new_password_holder" style="display: none;">
+					<label class="form_label" for="sq_new_password">New Password :</label>
+					<div class="chpwd_text">
+						<input type="password" id="sq_new_password" name="sq_new_password" onkeyup="securityQuestionsObj.checksecurity()"  class="form-control" />
+						<div class="check_tick"></div>
+					</div>
+				</div>
+				
+				<div class="input-style repeat_sq_new_password_holder" style="display: none;">
+					<label class="form_label" for="repeat_sq_new_password">Repeat New Password :</label>
+					<div class="chpwd_text">
+						<input type="password" id="repeat_sq_new_password" name="repeat_sq_new_password"  class="form-control" />
+						<div class="check_tick"></div>
+					</div>
+				</div>
+				<ul class="error_message">
+					
+				</ul>
+				<div class="login_btn_wrap">
+					<button id="security_questions_submit_btn" class="btn radius" type="button">
+						Submit
+					</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>

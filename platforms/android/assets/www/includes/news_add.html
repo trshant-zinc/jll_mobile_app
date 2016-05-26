@@ -1,0 +1,125 @@
+<div class="resorces_model_wrap">
+	<div class="r_model_container">
+		<div class="model_head">
+			<div class="model_head_icon">
+				<img src="images/icons/add_document.png" alt="add document" />
+			</div>
+			<div class="model_head_text">
+				Add News
+			</div>
+		</div>
+		<form method="post" id="news_add_form" enctype="multipart/form-data">
+			<div class="r_m_form">
+				<div class="row">
+					<div class="col_2">
+						<div class="ff_container">
+							<label>Article Title:</label>
+							<input type="text" name="news_name" placeholder="Type Here" class="form-control" />
+						</div>
+					</div>
+					<div class="col_2">
+						<div class="hf_container">
+							<label>Date:</label>
+							<input type="text" name="news_date" readonly="readonly" placeholder="" class="form-control calender_textbox datepicker" />
+						</div>
+						<div class="hf_container">
+							<label>Access Level:</label>
+							<select class="news_access_level" name="news_access_level[]" multiple="multiple"><option>loading...</option></select>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col_2">
+						<div class="hf_container">
+							<label>Country:</label>
+							<select class="news_country" name="news_country[]" multiple="multiple"><option>loading...</option></select>
+						</div>
+						<div class="hf_container">
+							<label>Region:</label>
+							<select class="news_region" name="news_region[]" multiple="multiple"><option>loading...</option></select>
+						</div>
+					</div>
+					<div class="col_2">
+						<div class="hf_container">
+							<label>Zone:</label>
+							<select class="news_zone" name="news_zone[]" multiple="multiple"><option>loading...</option></select>
+						</div>
+						<div class="hf_container">
+							<label>Venue:</label>
+							<select class="news_venue" name="news_venue[]" multiple="multiple"><option>loading...</option></select>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col_8">
+						<label>Article:</label>
+						<textarea class="form-control" name="faq_answer" placeholder="Type Here" ></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col_2">
+						<div class="hf_container">
+							<label>Image 1:</label>
+							<input type="file" name="file" id="file-2" class="inputfile inputfile-2"/>
+							<label for="file-2" class="upload_file_label"> 
+								<strong class="camera_icon"><img src="images/icons/camera_icon.png" alt="camera" /></strong> 
+								<span>Upload</span> 
+							</label>
+							<div class="upload_file_list"></div>
+						</div>
+						<div class="hf_container">
+							<label>Image 2:</label>
+							<input type="file" name="file" id="file-2" class="inputfile inputfile-2"/>
+							<label for="file-2" class="upload_file_label"> 
+								<strong class="camera_icon"><img src="images/icons/camera_icon.png" alt="camera" /></strong> 
+								<span>Upload</span> 
+							</label>
+							<div class="upload_file_list"></div>
+						</div>
+					</div>
+					<div class="col_2">
+						<div class="hf_container">
+							<label>Image 3:</label>
+							<input type="file" name="file" id="file-2" class="inputfile inputfile-2"/>
+							<label for="file-2" class="upload_file_label"> 
+								<strong class="camera_icon"><img src="images/icons/camera_icon.png" alt="camera" /></strong> 
+								<span>Upload</span> 
+							</label>
+							<div class="upload_file_list"></div>
+						</div>
+						<div class="hf_container">
+							<label>Image 4:</label>
+							<input type="file" name="file" id="file-2" class="inputfile inputfile-2"/>
+							<label for="file-2" class="upload_file_label"> 
+								<strong class="camera_icon"><img src="images/icons/camera_icon.png" alt="camera" /></strong> 
+								<span>Upload</span> 
+							</label>
+							<div class="upload_file_list"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="model_button">
+				<div class="model_button_right">
+					<div class="btn-group action-button action-nxt icon-btn">
+						<div class="wrap-btn">
+							<button type="button" class="button btn-green btn-block radius" id="news_submit_button">
+								<span class="v-flex"> <span class="btn-txt">Add New</span> <span class="circle-flex"> <span class="s-btn-icon radius"><i class="fa fa-chevron-right"></i></span> </span> </span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="model_button_left">
+					<div class="btn-group action-button icon-btn list list_button" data-tab="news" data-tabTitle="news">
+						<div class="wrap-btn">
+							<button type="button" class="button btn-action btn-block radius">
+								<span class="v-flex"> <span class="circle-flex"> <span class="s-btn-icon radius"><i class="fa fa-chevron-left"></i></span> </span> <span class="btn-txt">Back</span> </span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

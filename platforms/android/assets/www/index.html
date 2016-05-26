@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"> 
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->	
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />     
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>JLL</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">    
+    <link rel="stylesheet" type="text/css" media="all" href="css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" media="all" href="css/style.css" />	
+	<link rel="stylesheet" type="text/css" media="all" href="css/plugins.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="css/globalinterface.css" />		
+	<link rel="stylesheet" type="text/css" media="all" href="css/employee.css" />		
+	<link rel="stylesheet" type="text/css" media="all" href="css/media.css" />	
+	<link rel="stylesheet" type="text/css" media="all" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="css/security.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="css/jquery.multiselect.css" />	
+    <link rel="stylesheet" type="text/css" media="all" href="css/login.css" />
+    
+    <script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>	
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>	
+	
+	<script type="text/javascript" src="js/jquery.circlechart.js"></script>	
+	<script type="text/javascript" src="js/modernizr.min.js"></script>
+	<script type="text/javascript" src="js/fancySelect.js"></script>	
+	<script type="text/javascript" src="js/custom.js"></script>	
+	<script type="text/javascript" src="js/select2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.multiselect.min.js"></script>
+	<script type="text/javascript" src="js/jquery.jscroll.min.js"></script>
+	
+	<script type="text/javascript" src="scripts/script.js"></script>	
+	<script type="text/javascript" src="scripts/document.js"></script>
+	<script type="text/javascript" src="scripts/change_password.js"></script>	
+	<script type="text/javascript" src="scripts/faqs.js"></script>	
+	<script type="text/javascript" src="scripts/links.js"></script>	
+	<script type="text/javascript" src="scripts/news.js"></script>	
+	<script type="text/javascript" src="scripts/videos.js"></script>	
+	<script type="text/javascript" src="scripts/login.js"></script>	
+	<script type="text/javascript" src="scripts/forgot_password.js"></script>
+	<script type="text/javascript" src="scripts/security_questions.js"></script>	
+   	<body onload="onLoad()">
+   		<div style="display: none;" id="overlay_loader_holder">
+   			<div class="overlay_loader"></div>
+   			<div class="overlay_loader_content"></div>
+   		</div>
+   		<div style="display: none;" id="no_internet_overlay_holder">
+   			<div class="no_internet_overlay_bg"></div>
+   			<div class="no_internet_overlay_block">
+   				<div class="overlay_loader"></div>
+   				<div class="overlay_loader_content">No Internet Connection.</div>
+   			</div>
+   		</div>
+   		<div style="display: none;" id="no_internet_holder">
+   			<div class="no_internet_block">
+   				<div class="loaderr"></div>
+   				<div class="loaderr_content">No Internet Connection.</div>
+   			</div>
+   		</div>
+   		<div style="display: none;" id="login_holder" data-include="includes/login.html" data-callback="load_login_error_messages"></div>	
+   		<div style="display: none;" id="forgot_password_holder" data-include="includes/forgot_password.html"></div>
+   		<div style="display: none;" id="reset_password_holder" data-include="includes/reset_password.html"></div>
+   		<div style="display: none;" id="security_questions_holder" data-include="includes/security_questions.html"></div>
+   		<div style="display: none;" id="change_password_holder" data-include="includes/change_password.html"></div>
+		<div class="page" style="display: none;">
+			<div class="side-panel" data-include="includes/side_panel.html"></div>
+			<div class="page-inner">
+				<div id="header" data-include="includes/header.html" data-callback="headerinit"></div>
+				<div id="content" class="staff_directory">
+					<div class="layout" id="home_tab_list" data-include="includes/dashboard.html"></div>
+					
+					<div class="layout empty_container" style="display: none;" id="document_tab_list"></div>
+					<div class="layout empty_container" style="display: none;" id="news_tab_list"></div>
+					<div class="layout empty_container" style="display: none;" id="video_tab_list"></div>
+					<div class="layout empty_container" style="display: none;" id="faq_tab_list"></div>
+					<div class="layout empty_container" style="display: none;" id="link_tab_list"></div>
+					
+					<div class="layout empty_container" style="display: none;" id="document_tab_add"></div>
+					<div class="layout empty_container" style="display: none;" id="news_tab_add"></div>
+					<div class="layout empty_container" style="display: none;" id="video_tab_add"></div>
+					<div class="layout empty_container" style="display: none;" id="faq_tab_add"></div>
+					<div class="layout empty_container" style="display: none;" id="link_tab_add"></div>
+					
+					<div class="layout empty_container" style="display: none;" id="news_tab_view"></div>
+					<div class="layout empty_container" style="display: none;" id="video_tab_view"></div>
+					<div class="layout empty_container" style="display: none;" id="faq_tab_view"></div>
+					<div class="layout empty_container" style="display: none;" id="link_tab_view"></div>
+					
+				</div>
+				<div id="footer" data-include="includes/footer.html"></div>
+			</div>
+		</div>
+			
+		
+		<script>
+			function initialise() {
+				$('#no_internet_holder').hide();
+				$('#login_holder').show();
+				appObj.getAppConfig();
+				loginObj.init();
+		    }
+			function onLoad() {	
+				document.addEventListener("deviceready", function(){
+					if( appObj.checkConnection() == 'No network connection'){
+						$('#no_internet_holder').show();
+					}else{
+						initialise();
+					}
+					document.addEventListener("offline", appObj.onOffline, false);
+					document.addEventListener("online", appObj.onOnline, false);
+				}, false);     	
+	    	}
+	    	var delay = (function(){
+				var timer = 0;
+				return function(callback, ms){
+			    	clearTimeout (timer);
+			    	timer = setTimeout(callback, ms);
+				};
+			})();
+		</script>
+	</body>
+</html>

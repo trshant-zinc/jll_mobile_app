@@ -1,0 +1,25 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "org.admin247.jll"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "org.admin247.jll"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "org.admin247.jll"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "org.admin247.jll"
+        }
+    }
+}
